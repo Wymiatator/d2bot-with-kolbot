@@ -1,0 +1,200 @@
+
+// ------------------ TEMP -------------------
+
+//[name] == ring && [quality] == rare # [fcr] == 10
+
+// ------------------ CRAFTING -------------------
+//[name] == amulet && [quality] == magic && [level] >= 91 # # [MaxQuantity] == 5
+//[name] == jewel && [quality] == magic # # [MaxQuantity] == 5
+//[name] == ralrune # # [MaxQuantity] == 5
+// ------------------ GEMS -------------------
+
+[name] == perfectamethyst || [name] == perfecttopaz || [name] == perfectdiamond || [name] == perfectsapphire || [name] == perfectruby || [name] == perfectemerald || [name] == perfectskull
+//[name] == flawlessamethyst || [name] == flawlesstopaz || [name] == flawlessdiamond || [name] == flawlesssapphire || [name] == flawlessruby || [name] == flawlessemerald || [name] == flawlessskull
+
+// Rune upgrades
+//[name] == chippeddiamond # # [MaxQuantity] == 3 // 3x hel
+//[name] == flawedtopaz # # [MaxQuantity] == 3 // 3x io
+[name] == flawedamethyst # # [MaxQuantity] == 1 // 3x lum
+//[name] == flawedsapphire # # [MaxQuantity] == 4 // 3x ko
+//[name] == flawedruby # # [MaxQuantity] == 2 // 3x fal
+//[name] == flawedemerald # # [MaxQuantity] == 2 // 3x lem
+//[name] == flaweddiamond # # [MaxQuantity] == 2 // 2x pul
+//[name] == topaz # # [MaxQuantity] == 3 // 2x um
+//[name] == amethyst # # [MaxQuantity] == 2 // 2x mal
+//[name] == sapphire # # [MaxQuantity] == 2 // 2x ist
+//[name] == ruby # # [MaxQuantity] == 1 // 2x gul
+
+
+// ------------------ RUNES -------------------
+
+//[name] == elrune # # [MaxQuantity] == 1
+//[name] == eldrune # # [MaxQuantity] == 1
+//[name] == tirrune # # [MaxQuantity] == 1
+//[name] == nefrune # # [MaxQuantity] == 1
+//[name] == ethrune # # [MaxQuantity] == 1
+//[name] == ithrune # # [MaxQuantity] == 1
+//[name] == talrune # # [MaxQuantity] == 2
+//[name] == ralrune # # [MaxQuantity] == 1
+//[name] == ortrune # # [MaxQuantity] == 1
+//[name] == thulrune # # [MaxQuantity] == 2
+//[name] == amnrune # # [MaxQuantity] == 1
+//[name] == solrune # # [MaxQuantity] == 1
+//[name] == shaelrune # # [MaxQuantity] == 1
+//[name] == dolrune # # [MaxQuantity] == 1
+//[name] == helrune # # [MaxQuantity] == 1
+//[name] == iorune # # [MaxQuantity] == 6
+[name] == lumrune # # [MaxQuantity] == 3
+[name] == korune # # [MaxQuantity] == 3
+[name] == falrune
+[name] == lemrune
+[name] == pulrune
+[name] == umrune
+[name] == malrune
+
+[name] == istrune
+[name] == gulrune
+[name] == vexrune
+[name] == ohmrune
+[name] == lorune
+[name] == surrune
+[name] == berrune
+[name] == jahrune
+[name] == chamrune
+[name] == zodrune
+
+// ------------------ CHARMS ------------------
+
+// Small
+[name] == smallcharm && [quality] == magic # [maxhp] >= 19
+[name] == smallcharm && [quality] == magic # [fireresist]+[lightresist]+[coldresist] >= 12 // All res
+[name] == smallcharm && [quality] == magic # ([fireresist] >= 10 || [coldresist] >= 10 || [lightresist] >= 10) // Single res
+[name] == smallcharm && [quality] == magic # [itemmagicbonus] >= 6 // MF
+[name] == smallcharm && [quality] == magic # [maxdamage] >= 3 && [tohit] >= 10 && [maxhp] >= 15
+
+// Large
+[name] == largecharm && [quality] == magic # [maxhp] >= 36
+[name] == largecharm && [quality] == magic # [fireresist] >= 6 && [lightresist] >= 6 // All res
+[name] == largecharm && [quality] == magic # [maxdamage] >= 6 && [tohit] >= 10 && [maxhp] >= 30
+
+// Grand
+//[name] == grandcharm && [quality] == magic && [level] >= 50 # # [MaxQuantity] == 6 // Crafting pure skillers
+//[name] == grandcharm && [quality] == magic && [level] >= 91 // Crafting skillers + vita
+[name] == grandcharm && [quality] == magic # [maxhp] >= 40
+[name] == grandcharm && [quality] == magic # [fireresist] >= 13 && [lightresist] >= 13 // All res
+[name] == grandcharm && [quality] == magic # ([fireresist] >= 26 || [coldresist] >= 26 || [lightresist] >= 26) // Single res
+[name] == grandcharm && [quality] == magic # [maxdamage] >= 10 && [tohit] >= 10 && [maxhp] >= 30
+
+// ------------------ SORCERESS ------------------
+
+//[name] == barbedshield && [quality] <= superior # [sockets] == 3 || [sockets] == 0 // Ancient's Pledge
+//[name] == broadsword && [quality] <= superior # [sockets] == 4 || [sockets] == 0 // Spirit
+//[name] == crystalsword && [quality] <= superior # [sockets] == 4 || [sockets] == 0 // Spirit
+//[name] == flail && [quality] <= superior && [level] >= 41 # [sockets] == 0 // Call to Arms
+
+//[name] == grimhelm && [quality] <= superior # [sockets] == 2 || [sockets] == 0 // Lore
+//([name] == duskshroud || [name] == archonplate || [name] == wyrmhide || [name] == scarabhusk) && [quality] <= superior && [flag] != ethereal # [sockets] == 2 || [sockets] == 3 // Smoke/Gloom
+//([name] == duskshroud || [name] == archonplate || [name] == wyrmhide || [name] == scarabhusk) && [quality] == superior && [flag] != ethereal # [sockets] == 0 // Smoke
+[name] == wyrmhide && [quality] == unique // skin of the vipermagi
+[name] == monarch && [quality] == unique // stormshield
+
+[name] == ogreaxe && [quality] == unique && [flag] == ethereal // bonehew
+[name] == thresher && [quality] == unique && [flag] == ethereal // the reaper's toll
+
+// ------------------ PALADIN ------------------
+
+// Crafting
+
+([name] == flail || [name] == crystalsword) && [quality] <= superior # [sockets] == 5 # [maxquantity] == 1 // Call to Arms
+//[name] == sacredtarge && [quality] <= superior # [sockets] == 4 || [sockets] == 0 // Spirit
+//[name] == flail && [quality] <= superior # [sockets] == 4 // Heart of the Oak
+
+// Unique
+
+[name] == gildedshield && [quality] == unique // Herald of Zakarum
+[name] == shako && [quality] == unique
+[name] == spiderwebsash && [quality] == unique
+[name] == scarabshellboots && [quality] == unique && [flag] == ethereal
+//[name] == battleboots && [quality] == unique
+//[name] == lightgauntlets && [quality] == unique
+//[name] == heavybracers && [quality] == set
+
+[name] == ring && [quality] == unique # [maxstamina] == 50 && [lifeleech] >= 3 // bk
+[name] == ring && [quality] == unique # [itemmagicbonus] >= 30 // nagel
+
+[name] == amulet && [quality] == unique # [strength] == 5 && [fireresist] >= 20 // mara
+//[name] == amulet && [quality] == unique # [lightresist] == 35 // highlord
+
+[type] == armor && [quality] == superior # [sockets] == 3 && [defense] >= 500 // Enigma base
+
+// Merc
+
+//[name] == demonhead && [quality] == unique // Andariel's Visage
+//[name] == grimhelm && [quality] == unique // Vampire Gaze
+[type] == armor && [quality] == normal && [flag] == ethereal # [sockets] == 0 && [defense] >= 700 // Fortitude
+
+[name] == crypticaxe && [quality] <= superior && [flag] == ethereal # [sockets] == 0 || [sockets] == 5 // Obedience
+[name] == greatpoleaxe && [quality] <= superior && [flag] == ethereal # [sockets] == 5 // Obedience
+
+([name] == warpike || [name] == ghostspear || [name] == greatpoleaxe) && [quality] <= superior && [flag] == ethereal # [sockets] == 6 || [sockets] == 0 // Breath of the Dying
+
+([name] == colossusvoulge || [name] == thresher || [name] == crypticaxe || [name] == greatpoleaxe || [name] == giantthresher) && [quality] <= superior && [flag] == ethereal # [sockets] == 4 // Insight
+[name] == colossusvoulge && [quality] <= superior && [flag] == ethereal # [sockets] == 0 // Insight
+
+[name] == krakenshell && [quality] == unique // Leviathan
+
+// Ubers
+
+//[name] == wingedhelm && [quality] == set
+[name] == phaseblade && [quality] <= superior # [sockets] == 5 // Grief
+//[name] == lightplatedboots && [quality] == unique
+//[name] == ring && [quality] == unique # [dexterity] >= 15 && [tohit] >= 150 // raven
+[name] == ring && [quality] == unique # [itemabsorblightpercent] >= 10 // wisp
+//[name] == warbelt && [quality] == unique // thundergod's vigor
+//[name] == vampirebonegloves && [quality] == unique // dracul's grasp
+([name] == sacredtarge || [name] == sacredrondache) && [quality] <= superior && [flag] == ethereal # [sockets] == 4 || [sockets] == 0 // Exile
+//[type] == armor && [quality] == superior # ([sockets] == 0 || [sockets] == 4) && [defense] >= 600 // Chains of Honor
+
+// ------------------ BARBARIAN ------------------
+
+([name] == berserkeraxe || [name] == colossussword || [name] == colossusblade) && [quality] <= superior && [flag] == ethereal # [sockets] >= 4 || [sockets] == 0
+[name] == berserkeraxe && [quality] == superior # [sockets] >= 4 || [sockets] == 0
+//[name] == berserkeraxe && [quality] <= superior # [sockets] == 5
+
+// Can wear Duress as budget option instead of Chains of Honor
+//[name] == tiara && [quality] == unique // for Uber Meph - probably unnecessary with CoH
+//[name] == tyrantclub && [quality] == unique //demon limb (for prebuff)
+
+[name] == slayerguard && [quality] == unique // arreat's face
+[name] == demonhidesash && [quality] == unique //string of ears
+
+[type] == primalhelm && [quality] >= magic # [barbarianskills]+[skillbattleorders] >= 4 || [warcriesskilltab]+[skillbattleorders] >= 5
+
+//[name] == amulet && [quality] == set # [itemdamagetomana] == 20 && [itemlightradius] == 3 // Angelic Wings
+//[name] == ring && [quality] == set # [hpregen] == 6 && [maxhp] == 20 // Angelic Halo
+
+[name] == grandcharm && [quality] == magic # [warcriesskilltab] == 1
+[Name] == jewel && [Quality] == magic # [enhanceddamage] >= 25 && [ias] >= 10
+[Name] == jewel && [Quality] == magic # [enhanceddamage] >= 25 && [strength]+[dexterity] >= 10
+[Name] == jewel && [Quality] == rare # [enhanceddamage] >= 25
+
+[type] == amulet && [quality] == magic # [barbarianskills] == 2 && [strength] >= 15
+[type] == amulet && [quality] == rare # [barbarianskills] == 2 && [strength]+[dexterity] >= 15
+
+// ------------------ DRUID ------------------
+
+//[name] == totemicmask && [quality] == unique // Jalal's Mane
+[name] == skyspirit && [quality] == unique // Ravenlore
+[name] == earthspirit && [quality] == unique // Spirit Keeper
+
+// ------------------ OTHER ------------------
+
+[name] == hydrabow && [quality] == unique //windforce
+//[name] == sharkskinbelt && [quality] == unique //Razortale - Amazon
+[type] == gloves && [quality] == magic && [flag] != ethereal # [ias] >= 15 && [javelinandspearskilltab] >= 2
+[type] == gloves && [quality] == rare && [flag] != ethereal # [ias] >= 15 && [javelinandspearskilltab] >= 2
+[type] == gloves && [quality] == magic && [flag] != ethereal # [ias] >= 15 && [manaleech] >= 3
+[type] == gloves && [quality] == rare && [flag] != ethereal # [ias] >= 15 && [manaleech] >= 3
+
+[type] == ring && [quality] == rare # [manaleech] >= 3 && [lifeleech] >= 3
+[type] == ring && [quality] == rare # [manaleech]+[lifeleech] >= 4 && [fireresist]+[lightresist]+[coldresist] >= 15 // All res

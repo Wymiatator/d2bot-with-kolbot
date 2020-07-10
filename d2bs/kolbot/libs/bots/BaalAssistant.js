@@ -7,6 +7,7 @@
 function BaalAssistant() {
 
 	var Leader = Config.Leader, // Not entriely needed in the configs.
+		KillEldritch = Config.BaalAssistant.KillEldritch,
 		KillNihlathak = Config.BaalAssistant.KillNihlathak,
 		FastChaos = Config.BaalAssistant.FastChaos,
 		Wait = Config.BaalAssistant.Wait, // Not entriely needed in the configs.
@@ -284,6 +285,16 @@ function BaalAssistant() {
 
 		if (i === 30) {
 			throw new Error("BaalHelper: Leader not partied");
+		}
+	}
+	
+	if (KillEldritch) {
+		include("bots/Eldritch.js");
+
+		try {
+			Eldritch();
+		} catch (e) {
+			print(e);
 		}
 	}
 

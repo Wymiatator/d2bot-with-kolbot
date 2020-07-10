@@ -8,8 +8,38 @@ var ClassAttack = {
 	bowCheck: false,
 	lightFuryTick: 0,
 
+	// MR: Get monsters in range of unit
+	monstersNearTarget: function (unit, radi) {
+		var count, monster = getUnit(1);	
+		count = 0;
+		if (monster) {
+			do {
+				if(Attack.checkMonster(monster)){
+					if (getDistance(unit, monster) <= radi) {
+						count += 1;
+					}
+				}
+			} while (monster.getNext());
+		}	
+		return count;
+	},
+
 	doAttack: function (unit, preattack) {
 		var needRepair = Town.needRepair();
+		// MR: Switch betweeen ranged and melee depending on enemies pack size
+		if (this.monstersNearTarget(unit, 15) > 4) {  // 15 is the distance around the target to check, 5 is criteria for using LF.
+			Config.AttackSkill[0] = -1; // Preattack skill.
+			Config.AttackSkill[1] = 35; // Primary skill to bosses.
+			Config.AttackSkill[2] = 35; // Primary untimed skill to bosses. Keep at -1 if Config.AttackSkill[1] is untimed skill.
+			Config.AttackSkill[3] = 35; // Primary skill to others.
+			Config.AttackSkill[4] = 35; // Primary untimed skill to others. Keep at -1 if Config.AttackSkill[3] is untimed skill.
+		} else {
+			Config.AttackSkill[0] = -1; // Preattack skill.
+			Config.AttackSkill[1] = 24; // Primary skill to bosses.
+			Config.AttackSkill[2] = 24; // Primary untimed skill to bosses. Keep at -1 if Config.AttackSkill[1] is untimed skill.
+			Config.AttackSkill[3] = 24; // Primary skill to others.
+			Config.AttackSkill[4] = 24; // Primary untimed skill to others. Keep at -1 if Config.AttackSkill[3] is untimed skill.
+		}
 
 		if ((Config.MercWatch && Town.needMerc()) || needRepair.length > 0) {
 			Town.visitTown(!!needRepair.length);

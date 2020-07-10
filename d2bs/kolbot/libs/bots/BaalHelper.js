@@ -262,6 +262,10 @@ MainLoop:
 	while (true) {
 		if (getDistance(me, 15093, me.classid === 3 ? 5029 : 5039) > 3) {
 			Pather.moveTo(15093, me.classid === 3 ? 5029 : 5039);
+			if (me.classid === 4) {
+				// MR: When barbarian always bo
+				Precast.doPrecast(true);
+			}
 		}
 
 		if (!getUnit(1, 543)) {
@@ -273,8 +277,6 @@ MainLoop:
 			Attack.clear(40);
 
 			tick = getTickCount();
-
-			Precast.doPrecast(true);
 
 			break;
 		case 2:
@@ -317,6 +319,7 @@ MainLoop:
 		}
 
 		Precast.doPrecast(false);
+		
 		delay(10);
 	}
 
